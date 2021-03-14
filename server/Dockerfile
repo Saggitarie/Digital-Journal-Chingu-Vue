@@ -4,3 +4,6 @@ COPY ./package.json ./
 RUN yarn
 COPY . .
 CMD ["yarn", "start:dev"]
+
+RUN cd prisma
+RUN yarn prisma generate
