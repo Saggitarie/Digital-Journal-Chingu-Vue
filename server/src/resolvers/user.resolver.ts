@@ -8,6 +8,6 @@ export class UserResolver {
 
   @Query((returns) => [User])
   async users() {
-    return this.prisma.user.findFirst()
+    return this.prisma.user.findMany()
   }
 }
